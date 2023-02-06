@@ -2,7 +2,6 @@ import "./home.styles.scss";
 import { Fragment } from "react"; // Fragment is you do not want wrapping div
 
 import Section from "../../components/global/section/section.component";
-import { Link } from "react-router-dom";
 import SectionFullWidth from "../../components/global/section-full-width/section-full-width.component";
 import QualificationList from "../../components/qualification-list/qualification-list.component";
 import ExperienceGraph from "../../components/homepage/experience-graph/experience-graph.component";
