@@ -1,0 +1,12 @@
+@import "../../../sass-boilerplate/helper.scss";
+
+.section-full-width {
+  position: relative;
+  left: 50%;
+  margin-bottom: 80px;
+  transform: translateX(-50%);
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  max-width: none;
+}

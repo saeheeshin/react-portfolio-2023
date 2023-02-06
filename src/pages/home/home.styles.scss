@@ -1,0 +1,23 @@
+@import "../../sass-boilerplate/helper.scss";
+
+.section__homepage__about-me {
+  .homepage__area--about-me {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.section-full-width__homepage__showcase {
+  &.section-full-width.no-grap {
+    @include mobile {
+      gap: 2px 0;
+    }
+  }
+  article {
+    @include defaultLayout;
+
+    @include desktop {
+      width: 100%;
+    }
+  }
+}

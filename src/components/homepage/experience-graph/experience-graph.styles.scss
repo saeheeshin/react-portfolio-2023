@@ -1,0 +1,32 @@
+@import "../../../sass-boilerplate/helper.scss";
+
+.experience-graph {
+  position: relative;
+  align-self: start;
+
+  @include viewport(601, 970) {
+    @include grid-column(3);
+  }
+
+  @include mobile {
+    margin-top: 20px 0 0 0;
+    text-align: center;
+  }
+
+  img {
+    @include mobile {
+      width: 158px;
+    }
+    @include desktop {
+      width: 100%;
+    }
+  }
+
+  h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $brand_primary;
+  }
+}

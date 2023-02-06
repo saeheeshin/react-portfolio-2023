@@ -1,0 +1,7 @@
+@import "../../sass-boilerplate/helper.scss";
+
+section.section__about-page__about-me {
+  article p:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+}

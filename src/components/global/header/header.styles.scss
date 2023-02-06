@@ -1,0 +1,210 @@
+@import "../../../sass-boilerplate/helper.scss";
+
+.nav__pages a {
+  @include Heading(700, 20, 12);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $brand_cultured;
+
+  // brand colorings on active state
+  &.active {
+    &.nav__pages--home {
+      color: $brand_primary;
+    }
+    &.nav__pages--portfolio {
+      color: $brand_primary;
+    }
+    &.nav__pages--resume {
+      color: $brand_tertiary;
+    }
+    &.nav__pages--about {
+      color: $brand_secondary;
+    }
+  }
+}
+
+@include mobile {
+  header {
+    background: $brand_copy;
+
+    section {
+      padding: 8px 0;
+      height: 51px;
+      text-align: center;
+
+      > button {
+        position: absolute;
+        top: 0;
+        left: 5px;
+        width: 51px;
+        height: 51px;
+        color: $brand_cultured;
+
+        .material-symbols-rounded {
+          font-size: 33px;
+        }
+      }
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: -100vw;
+      width: 100vw;
+      height: 100vh;
+      z-index: 2;
+      transition: left 300ms ease-in-out;
+      background: $brand_copy;
+
+      .nav__pages {
+        margin-top: 40px;
+
+        a:before,
+        li:last-child a:after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 21px;
+          height: 3px;
+          background: $brand_independence;
+        }
+
+        a {
+          position: relative;
+          padding: 30px 0;
+          width: 100%;
+          display: block;
+
+          &:before {
+            top: 0;
+          }
+        }
+
+        li:last-child a:after {
+          bottom: 0;
+        }
+      }
+
+      .nav__social {
+        margin-top: 71px;
+        display: flex;
+        justify-content: center;
+
+        li {
+          margin: 0 30px;
+        }
+      }
+    }
+  }
+
+  html.mobile-menu__expanded header nav {
+    left: 0;
+  }
+}
+
+/**** MIXIN ****/
+@mixin navHoverState($color) {
+  &:hover {
+    color: $color;
+  }
+  &:before {
+    background: $color;
+  }
+}
+
+@include desktop {
+  header {
+    padding: 10px 0;
+    background: $brand_copy;
+
+    > section {
+      @include defaultLayout;
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: repeat(2, min-content);
+    }
+
+    // hide mobile open/close button on desktop
+    nav > section,
+    section > nav > .logo,
+    button {
+      display: none;
+    }
+
+    // nav styling
+    nav {
+      position: relative;
+      right: -30px;
+      display: grid;
+      grid-template-columns: repeat(2, min-content);
+      align-items: center;
+    }
+
+    .nav__pages,
+    .nav__social {
+      display: flex;
+
+      li {
+        margin-right: 30px;
+      }
+    }
+
+    .nav__pages {
+      height: 100%;
+      align-items: center;
+
+      li {
+        height: 100%;
+      }
+
+      a {
+        position: relative;
+        transform: translateY(0px);
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+
+        // border hover effect that only triggers when active class is not present
+        &:not(.active) {
+          &:hover {
+            transform: translateY(-2px);
+            transition: all 300ms cubic-bezier(0.15, 0.9, 0.5, 2.25);
+            will-change: transform, color;
+          }
+          &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+            width: 100%;
+            height: 0;
+            transition: height 200ms cubic-bezier(0.15, 0.9, 0.5, 2.25);
+            will-change: height;
+          }
+
+          &:hover:before {
+            height: 3px;
+          }
+        }
+
+        // list of border and hover color based on brands
+        &.nav__pages--home {
+          @include navHoverState($brand_primary);
+        }
+
+        &.nav__pages--portfolio {
+          @include navHoverState($brand_primary);
+        }
+
+        &.nav__pages--resume {
+          @include navHoverState($brand_tertiary);
+        }
+
+        &.nav__pages--about {
+          @include navHoverState($brand_secondary);
+        }
+      }
+    }
+  }
+}

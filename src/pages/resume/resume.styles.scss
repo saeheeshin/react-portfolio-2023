@@ -1,0 +1,9 @@
+@import "../../sass-boilerplate/helper.scss";
+
+section.section__resume__details {
+  .resume__content-area {
+    article.resume__item:nth-last-of-type(1) {
+      margin: 0;
+    }
+  }
+}

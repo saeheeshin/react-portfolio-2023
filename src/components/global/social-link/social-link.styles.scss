@@ -1,0 +1,164 @@
+@import "../../../sass-boilerplate/helper.scss";
+
+/**** MIXIN ****/
+@mixin socialMediaLinks(
+  $size,
+  $sizeMobile,
+  $baseColor,
+  $hoverColor,
+  $inverted
+) {
+  a {
+    @include mobile {
+      width: #{$sizeMobile}px;
+      height: #{$sizeMobile}px;
+    }
+    @include desktop {
+      width: #{$size}px;
+      height: #{$size}px;
+    }
+
+    transition: background-color 300ms ease-in-out;
+    will-change: background-color;
+    background-color: $baseColor;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      transition: top 300ms cubic-bezier(0.5, 1, 0.5, 1.4);
+      will-change: top;
+
+      @include mobile {
+        width: #{$sizeMobile}px;
+        height: #{$sizeMobile}px;
+      }
+      @include desktop {
+        width: #{$size}px;
+        height: #{$size}px;
+      }
+    }
+
+    &:before {
+      @include mobile {
+        top: -#{$sizeMobile}px;
+      }
+      @include desktop {
+        top: -#{$size}px;
+      }
+    }
+
+    &:after {
+      top: 0;
+    }
+
+    &:hover {
+      background-color: $hoverColor;
+      &:before {
+        top: 0;
+      }
+      &:after {
+        @include mobile {
+          top: #{$sizeMobile}px;
+        }
+        @include desktop {
+          top: #{$size}px;
+        }
+      }
+    }
+  }
+
+  &.social__btn--linkedin,
+  &.social__btn--behance,
+  &.social__btn--email {
+    a {
+      &:before,
+      &:after {
+        @include mobile {
+          background-size: #{$sizeMobile}px #{$sizeMobile * 2}px;
+        }
+        @include desktop {
+          background-size: #{$size}px #{$size * 2}px;
+        }
+      }
+      &:before {
+        @if ($inverted == true) {
+          background-position: 0 100%;
+        } @else {
+          background-position: 0 0;
+        }
+      }
+      &:after {
+        @if ($inverted == true) {
+          background-position: 0 0;
+        } @else {
+          background-position: 0 100%;
+        }
+      }
+    }
+  }
+}
+
+/**** STYLING ****/
+// common
+.social-media-link {
+  a {
+    position: relative;
+    display: block;
+    border-radius: 100%;
+    overflow: hidden;
+
+    span {
+      @include hidden;
+    }
+  }
+}
+
+// images
+.social__btn--linkedin a {
+  &:before,
+  &:after {
+    background-image: url("../../../assets/logos/logo__social--linkedin.svg");
+  }
+}
+
+.social__btn--behance a {
+  &:before,
+  &:after {
+    background-image: url("../../../assets/logos/logo__social--behance.svg");
+  }
+}
+
+.social__btn--email a {
+  &:before,
+  &:after {
+    background-image: url("../../../assets/logos/logo__social--email.svg");
+  }
+}
+
+// header only
+header {
+  .social-media-link {
+    @include socialMediaLinks(
+      30,
+      40,
+      $brand_cultured,
+      $brand_independence,
+      false
+    );
+  }
+}
+
+// footer only
+footer {
+  .social-media-link {
+    @include socialMediaLinks(
+      45,
+      45,
+      $brand_independence,
+      $brand_cultured,
+      true
+    );
+  }
+}

@@ -1,0 +1,51 @@
+@import "../../../sass-boilerplate/helper.scss";
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+
+  strong {
+    display: flex;
+    align-items: center;
+    @include SubHeading(500, 13, 20);
+  }
+
+  @include mobile {
+    padding: 14px 22px;
+
+    .material-symbols-rounded {
+      margin-right: 8px;
+      font-size: 20px;
+      display: inline-block;
+    }
+  }
+  @include desktop {
+    padding: 14px 35px;
+
+    .material-symbols-rounded {
+      margin-right: 10px;
+      font-size: 25px;
+      display: inline-block;
+    }
+  }
+
+  &__primary {
+    color: $brand_cultured;
+    box-shadow: 0px 5px 14px rgba($brand_primary, 0.5);
+    background: $brand_primary;
+  }
+
+  &__secondary {
+    color: $brand_cultured;
+    box-shadow: 0px 5px 14px rgba($brand_secondary, 0.5);
+    background: $brand_secondary;
+  }
+
+  &__tertiary {
+    color: $brand_cultured;
+    box-shadow: 0px 5px 14px rgba($brand_tertiary, 0.5);
+    background: $brand_tertiary;
+  }
+}

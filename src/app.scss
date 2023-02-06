@@ -1,0 +1,49 @@
+@import "./sass-boilerplate/helper.scss";
+
+html,
+body {
+  background: $brand_cultured;
+}
+
+#root {
+  overflow: hidden;
+}
+
+/**** TYPOGRPAHY ****/
+body,
+p,
+li {
+  @include Copy(400, 16, 16);
+  color: $brand_copy;
+}
+p {
+  @include mobile {
+    margin-bottom: 20px;
+  }
+  @include desktop {
+    margin-bottom: 25px;
+  }
+}
+h1 {
+  @include Heading(700, 35, 60);
+  text-transform: uppercase;
+}
+h2 {
+  @include Heading(700, 28, 35);
+  margin-bottom: 30px;
+  color: $brand_independence;
+}
+h3 {
+  @include SubHeading(500, 18, 18);
+  text-transform: uppercase;
+}
+h4 {
+  @include Heading(700, 17, 19);
+  margin-bottom: 18px;
+  color: $brand_independence;
+}
+
+/**** SECTION ****/
+.section {
+  @include defaultLayout;
+}

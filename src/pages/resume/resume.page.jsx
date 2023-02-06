@@ -1,0 +1,66 @@
+import "./resume.styles.scss";
+import { Fragment, useState } from "react"; // Fragment is you do not want wrapping div
+import Section from "../../components/global/section/section.component";
+import {
+  ResumeExperienceData,
+  ResumeEducationData,
+} from "../../content/site.data";
+
+import Button from "../../components/global/button/button.component";
+import QualificationList from "../../components/qualification-list/qualification-list.component";
+import Tab from "../../components/resume/tab/tab.component";
+import ResumeItem from "../../components/resume/resume-item/resume-item.component";
+
+const PageResume = () => {
+  const [resumeContent, setResumeContent] = useState(ResumeExperienceData);
+
+  const tabChangeResume = () => {
+    const tabExperienceTab = document.querySelector(".tab__experience");
+    const tabEducationTab = document.querySelector(".tab__education");
+
+    tabExperienceTab.classList.toggle("active");
+    tabEducationTab.classList.toggle("active");
+
+    setResumeContent(
+      tabExperienceTab.classList.contains("active")
+        ? ResumeExperienceData
+        : ResumeEducationData
+    );
+  };
+
+  return (
+    <Fragment>
+      <Section sectionName="resume__button">
+        <div className="grid__mobile--6 grid__desktop--12">
+          <Button buttonType="tertiary" icon="download_for_offline">
+            Download PDF Resume
+          </Button>
+        </div>
+      </Section>
+
+      <Section sectionName="resume__qualifications">
+        <h2 className="grid__mobile--6 grid__desktop--12">Qualifications</h2>
+        <QualificationList />
+      </Section>
+
+      <Section sectionName="resume__details">
+        <Tab tabChangeHandler={tabChangeResume} />
+        <div className="resume__content-area grid__mobile--6 grid__desktop--12">
+          {resumeContent.map((detail) => {
+            return <ResumeItem key={detail.id} details={detail} />;
+          })}
+        </div>
+      </Section>
+
+      <Section sectionName="resume__button">
+        <div className="grid__mobile--6 grid__desktop--12">
+          <Button buttonType="tertiary" icon="download_for_offline">
+            Download PDF Resume
+          </Button>
+        </div>
+      </Section>
+    </Fragment>
+  );
+};
+
+export default PageResume;

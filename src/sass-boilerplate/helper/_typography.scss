@@ -1,0 +1,31 @@
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quicksand', sans-serif;
+*/
+
+@mixin fontProperties($weight, $mobileSize, $desktopSize) {
+  font-weight: $weight;
+
+  @include mobile {
+    font-size: #{$mobileSize}px;
+  }
+  @include desktop {
+    font-size: #{$desktopSize}px;
+  }
+}
+
+@mixin Copy($weight, $mobileSize, $desktopSize) {
+  font-family: "Open Sans", sans-serif;
+  @include fontProperties($weight, $mobileSize, $desktopSize);
+}
+
+@mixin Heading($weight, $mobileSize, $desktopSize) {
+  font-family: "Quicksand", sans-serif;
+  @include fontProperties($weight, $mobileSize, $desktopSize);
+}
+
+@mixin SubHeading($weight, $mobileSize, $desktopSize) {
+  font-family: "Oswald", sans-serif;
+  @include fontProperties($weight, $mobileSize, $desktopSize);
+}

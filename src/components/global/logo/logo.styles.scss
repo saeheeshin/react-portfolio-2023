@@ -1,0 +1,53 @@
+@import "../../../sass-boilerplate/helper.scss";
+
+.logo {
+  display: inline-block;
+  background-size: 100% 100%;
+
+  &__type {
+    &--badge {
+      background-image: url("../../../assets/logos/logo__type--badge.svg");
+    }
+    &--brand {
+      background-image: url("../../../assets/logos/logo__type--brand.svg");
+    }
+    &--inverted-badge {
+      background-image: url("../../../assets/logos/logo__type--inverted-badge.svg");
+    }
+    &--inverted {
+      background-image: url("../../../assets/logos/logo__type--inverted.svg");
+    }
+    &--light {
+      background-image: url("../../../assets/logos/logo__type--light.svg");
+
+      &.active,
+      &:hover {
+        background-image: url("../../../assets/logos/logo__type--brand.svg");
+      }
+    }
+  }
+
+  &__location {
+    &--header {
+      @include mobile {
+        width: 28px;
+        height: 31px;
+      }
+      @include desktop {
+        width: 40px;
+        height: 44px;
+      }
+    }
+
+    &--footer {
+      @include mobile {
+        width: 35px;
+        height: 39px;
+      }
+      @include desktop {
+        width: 40px;
+        height: 46px;
+      }
+    }
+  }
+}

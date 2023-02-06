@@ -1,0 +1,36 @@
+@import "../../sass-boilerplate/helper.scss";
+
+.qualification-list {
+  text-align: center;
+
+  @include mobile {
+    margin-bottom: 80px;
+  }
+
+  .qualification-list__icon {
+    width: 51px;
+    height: 51px;
+    border-radius: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: $brand_copy;
+  }
+  .material-symbols-rounded {
+    font-size: 26px;
+    color: $brand_cultured;
+  }
+  h3 {
+    margin: 15px 0;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+@include mobile {
+  .section__homepage__qualifications
+    div.qualification-list:nth-last-of-type(1) {
+    margin: 0;
+  }
+}
