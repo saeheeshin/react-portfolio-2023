@@ -7,7 +7,7 @@ const SocialLink = () => {
       {SocialMediaData.map(({ id, className, to, text }) => {
         return (
           <li className={`social-media-link ${className}`} key={id}>
-            <a href={to}>
+            <a href={to} target="_blank" rel="noreferrer">
               <span>{text}</span>
             </a>
           </li>
