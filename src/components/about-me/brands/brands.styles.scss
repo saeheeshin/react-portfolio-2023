@@ -60,5 +60,8 @@
     @include mobile {
       height: 95px;
     }
+    @include tablet-sm-only {
+      height: 150px;
+    }
   }
 }

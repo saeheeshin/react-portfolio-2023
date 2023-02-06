@@ -4,6 +4,10 @@ import parse from "html-react-parser";
 import Logo from "../logo/logo.component";
 import SocialLink from "../social-link/social-link.component";
 
+const backToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 const Footer = () => {
   const { withLove, title, text } = FooterData;
 
@@ -14,7 +18,7 @@ const Footer = () => {
           <Logo logoType="inverted-badge" logoLocation="footer" />
         </div>
         <p className="with-love">{parse(withLove)}</p>
-        <div className="butterfly"></div>
+        <div onClick={backToTop} className="butterfly"></div>
 
         <div className="content">
           <h4>{title}</h4>

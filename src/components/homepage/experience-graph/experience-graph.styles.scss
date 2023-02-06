@@ -4,7 +4,7 @@
   position: relative;
   align-self: start;
 
-  @include viewport(601, 970) {
+  @include tablet-sm-only {
     @include grid-column(3);
   }
 

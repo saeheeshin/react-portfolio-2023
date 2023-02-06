@@ -3,6 +3,7 @@ import { Fragment } from "react"; // Fragment is you do not want wrapping div
 
 import Section from "../../components/global/section/section.component";
 import SectionFullWidth from "../../components/global/section-full-width/section-full-width.component";
+
 import QualificationList from "../../components/qualification-list/qualification-list.component";
 import ExperienceGraph from "../../components/homepage/experience-graph/experience-graph.component";
 import PortfolioShowcaseFull from "../../components/homepage/portfolio-showcase-full/portfolio-showcase-full.component";
@@ -36,8 +37,8 @@ const PageHome = () => {
         <article className="grid__mobile--6 grid__desktop--12">
           <h2>Portfolio Showcase</h2>
           <p>
-            Take a look at my recent work of UX Design and Front End
-            Development.
+            Take a look at my recent work of <strong>UX Design</strong> and{" "}
+            <strong>Front End Development</strong>.
           </p>
         </article>
         <PortfolioShowcaseFull />
