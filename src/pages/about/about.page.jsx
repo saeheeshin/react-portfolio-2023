@@ -5,6 +5,8 @@ import Section from "../../components/global/section/section.component";
 import Brands from "../../components/about-me/brands/brands.component";
 import WhatIDo from "../../components/about-me/what-i-do/what-i-do.component";
 
+import { BrandData, WhatIDoData } from "../../content/site.data";
+
 const PageAbout = () => {
   return (
     <Fragment>
@@ -29,12 +31,16 @@ const PageAbout = () => {
         <h2 className="grid__mobile--6 grid__desktop--12">
           Brands I Worked On
         </h2>
-        <Brands />
+        {BrandData.map((brand) => {
+          return <Brands key={brand.id} details={brand} />;
+        })}
       </Section>
 
       <Section sectionName="about-page__what-i-do">
         <h2 className="grid__mobile--6 grid__desktop--12">What I Do</h2>
-        <WhatIDo />
+        {WhatIDoData.map((whatido) => {
+          return <WhatIDo key={whatido.id} details={whatido} />;
+        })}
       </Section>
     </Fragment>
   );
