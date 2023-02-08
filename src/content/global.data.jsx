@@ -49,42 +49,9 @@ const FooterData = {
   text: "Please don't hesitate to <a href='mailto:saeheeshin@gmail.com?subject=Portfolio%20Inquries'>contact me</a> for new opportunities and discuss what I can do for your company.",
 };
 
-const QualificationData = [
-  {
-    id: 1,
-    icon: "architecture",
-    title: "UX",
-    text: "User Story, Personas, User Journey, UX research, Lo-fi Wireframe, Hi-fi Mockup, Prototype, Style Guide (Sticker Sheet)",
-  },
-  {
-    id: 2,
-    icon: "code",
-    title: "Front End",
-    text: "HTML, SASS/CSS, ES6, JQuery, Javascript, Emmet, Creating/Setting up Boilerplate, Familiarity with React, AEM styling setup and authoring",
-  },
-  {
-    id: 3,
-    icon: "devices",
-    title: "Graphics",
-    text: "Figma, Sketch, Photoshop, Photo Edit, Image Optimization, Vector Assets",
-  },
-  {
-    id: 4,
-    icon: "schema",
-    title: "Process",
-    text: "Jira, Confluence, Draw.io, Node.js, Gulp, Github, SOP Documents, Training Videos",
-  },
-];
-
 const MediaQuery = {
   mobile: "screen and (max-width: 600px)",
   desktop: "screen and (min-width: 601px) and (max-width: 9999px)",
 };
 
-export {
-  NavigationData,
-  SocialMediaData,
-  FooterData,
-  QualificationData,
-  MediaQuery,
-};
+export { NavigationData, SocialMediaData, FooterData, MediaQuery };

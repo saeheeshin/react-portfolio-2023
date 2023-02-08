@@ -4,6 +4,7 @@ import Section from "../../components/global/section/section.component";
 import {
   ResumeExperienceData,
   ResumeEducationData,
+  QualificationData,
 } from "../../content/site.data";
 
 import Button from "../../components/global/button/button.component";
@@ -40,7 +41,11 @@ const PageResume = () => {
 
       <Section sectionName="resume__qualifications">
         <h2 className="grid__mobile--6 grid__desktop--12">Qualifications</h2>
-        <QualificationList />
+        {QualificationData.map((qualification) => {
+          return (
+            <QualificationList key={qualification.id} details={qualification} />
+          );
+        })}
       </Section>
 
       <Section sectionName="resume__details">

@@ -10,6 +10,7 @@ import PortfolioShowcaseFull from "../../components/homepage/portfolio-showcase-
 
 import {
   ExperienceGraphData,
+  QualificationData,
   PortfolioShowcaseData,
 } from "../../content/site.data";
 
@@ -37,7 +38,11 @@ const PageHome = () => {
 
       <Section sectionName="homepage__qualifications">
         <h2 className="grid__mobile--6 grid__desktop--12">Qualifications</h2>
-        <QualificationList />
+        {QualificationData.map((qualification) => {
+          return (
+            <QualificationList key={qualification.id} details={qualification} />
+          );
+        })}
       </Section>
 
       <SectionFullWidth sectionName="homepage__showcase" className="no-grap">

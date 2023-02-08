@@ -1,25 +1,14 @@
 import "./qualification-list.styles.scss";
-import { Fragment } from "react"; // Fragment is you do not want wrapping div
-import { QualificationData } from "../../content/global.data";
 
-const QualificationList = () => {
+const QualificationList = ({ details: { icon, title, text } }) => {
   return (
-    <Fragment>
-      {QualificationData.map(({ id, icon, title, text }) => {
-        return (
-          <div
-            key={id}
-            className="qualification-list grid__mobile--6 grid__desktop--3"
-          >
-            <div className="qualification-list__icon">
-              <span className="material-symbols-rounded">{icon}</span>
-            </div>
-            <h3>{title}</h3>
-            <p>{text}</p>
-          </div>
-        );
-      })}
-    </Fragment>
+    <div className="qualification-list grid__mobile--6 grid__desktop--3">
+      <div className="qualification-list__icon">
+        <span className="material-symbols-rounded">{icon}</span>
+      </div>
+      <h3>{title}</h3>
+      <p>{text}</p>
+    </div>
   );
 };
 
