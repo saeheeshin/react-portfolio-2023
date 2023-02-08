@@ -9,8 +9,8 @@ const PagePortfolio = () => {
     <Fragment>
       <Section sectionName="portfolio-page__ux">
         <h2 className="grid__mobile--6 grid__desktop--12">UX Case Study</h2>
-        {PorfolioUxData.map((detail) => {
-          return <PortfolioItem key={detail.id} details={detail} />;
+        {PorfolioUxData.map((portfolio) => {
+          return <PortfolioItem key={portfolio.id} details={portfolio} />;
         })}
       </Section>
 
@@ -18,8 +18,8 @@ const PagePortfolio = () => {
         <h2 className="grid__mobile--6 grid__desktop--12">
           Front End Development
         </h2>
-        {PortfolioFrontEndData.map((detail) => {
-          return <PortfolioItem key={detail.id} details={detail} />;
+        {PortfolioFrontEndData.map((portfolio) => {
+          return <PortfolioItem key={portfolio.id} details={portfolio} />;
         })}
       </Section>
     </Fragment>

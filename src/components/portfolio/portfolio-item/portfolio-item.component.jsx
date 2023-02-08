@@ -6,7 +6,7 @@ const PortfolioItem = ({ details: { title, icon, category, content } }) => {
   const pagePath = title.replace(" ", "-").toLowerCase();
   return (
     <div
-      className={`grid__mobile--6 grid__desktop--4 portfolio-item portfolio-item__${pagePath}`}
+      className={`grid__mobile--6 grid__desktop--4 grid__tablet-sm-only--6 portfolio-item portfolio-item__${pagePath}`}
     >
       <Link to={`/portfolio/${pagePath}`} />
       <hgroup>

@@ -8,6 +8,11 @@ import QualificationList from "../../components/qualification-list/qualification
 import ExperienceGraph from "../../components/homepage/experience-graph/experience-graph.component";
 import PortfolioShowcaseFull from "../../components/homepage/portfolio-showcase-full/portfolio-showcase-full.component";
 
+import {
+  ExperienceGraphData,
+  PortfolioShowcaseData,
+} from "../../content/site.data";
+
 const PageHome = () => {
   return (
     <Fragment>
@@ -25,7 +30,9 @@ const PageHome = () => {
           </article>
         </div>
         <div className="grid__desktop--1"></div>
-        <ExperienceGraph />
+        {ExperienceGraphData.map((experience) => {
+          return <ExperienceGraph key={experience.id} details={experience} />;
+        })}
       </Section>
 
       <Section sectionName="homepage__qualifications">
@@ -41,7 +48,12 @@ const PageHome = () => {
             <strong>Front End Development</strong>.
           </p>
         </article>
-        <PortfolioShowcaseFull />
+
+        {PortfolioShowcaseData.map((portfolio) => {
+          return (
+            <PortfolioShowcaseFull key={portfolio.id} details={portfolio} />
+          );
+        })}
       </SectionFullWidth>
     </Fragment>
   );

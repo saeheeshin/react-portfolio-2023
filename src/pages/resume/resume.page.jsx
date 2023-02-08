@@ -46,8 +46,8 @@ const PageResume = () => {
       <Section sectionName="resume__details">
         <Tab tabChangeHandler={tabChangeResume} />
         <div className="resume__content-area grid__mobile--6 grid__desktop--12">
-          {resumeContent.map((detail) => {
-            return <ResumeItem key={detail.id} details={detail} />;
+          {resumeContent.map((resume) => {
+            return <ResumeItem key={resume.id} details={resume} />;
           })}
         </div>
       </Section>
