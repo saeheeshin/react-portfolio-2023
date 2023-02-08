@@ -4,10 +4,8 @@ import { Link } from "react-router-dom";
 const PortfolioShowcaseFull = ({ details: { title, text, imageSrc } }) => {
   const pagePath = title.replace(" ", "-").toLowerCase();
   return (
-    <Link
-      to={`/portfolio/${pagePath}`}
-      className="portfolio-showcase-full grid__desktop--4 grid__mobile--6"
-    >
+    <div className="portfolio-showcase-full grid__desktop--4 grid__mobile--6">
+      <Link to={`/portfolio/${pagePath}`} />
       <div className="content">
         <h3>{title}</h3>
         <p>{text}</p>
@@ -16,7 +14,7 @@ const PortfolioShowcaseFull = ({ details: { title, text, imageSrc } }) => {
         src={`/assets/images/portfolio-showcase/${imageSrc}`}
         alt={`Portfolio Showcase : ${title}`}
       />
-    </Link>
+    </div>
   );
 };
 

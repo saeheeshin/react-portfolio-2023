@@ -98,8 +98,13 @@
     }
   }
 
-  html.mobile-menu__expanded header nav {
-    left: 0;
+  html.mobile-menu__expanded {
+    height: 100vh;
+    overflow: hidden;
+
+    header nav {
+      left: 0;
+    }
   }
 }
 

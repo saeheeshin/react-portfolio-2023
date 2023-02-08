@@ -45,7 +45,7 @@ const PageHome = () => {
         })}
       </Section>
 
-      <SectionFullWidth sectionName="homepage__showcase" className="no-grap">
+      <SectionFullWidth sectionName="homepage__showcase" className="no-gap">
         <article className="grid__mobile--6 grid__desktop--12">
           <h2>Portfolio Showcase</h2>
           <p>

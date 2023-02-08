@@ -2,7 +2,9 @@
 
 .portfolio-item {
   position: relative;
-  background: gray;
+  padding: 0 15px 15px 15px;
+  background: #727199;
+  background: radial-gradient(ellipse at 50% 40%, #727199 34%, #2b2b4b 100%);
 
   a {
     position: absolute;
@@ -12,11 +14,31 @@
     height: 100%;
   }
 
+  h3,
+  p {
+    margin: 0;
+    color: $brand_white;
+    display: inline-flex;
+  }
+
+  h3 {
+    margin: 15px 0 8px 0;
+  }
+
   .portfolio-item__thumbnail {
     width: 100%;
   }
 
-  .portfolio-item--blank {
-    width: 100%;
+  .portfolio-item__heading {
+    display: flex;
+    flex-direction: column;
+
+    .material-symbols-rounded {
+      margin-right: 8px;
+    }
+  }
+
+  .portfolio-item__hover {
+    display: none;
   }
 }

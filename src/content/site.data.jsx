@@ -90,8 +90,8 @@ const PorfolioUxData = [
   {
     id: 3,
     title: "Heliconia",
-    icon: "devices",
-    category: "Responsive Website",
+    icon: "view_comfy",
+    category: "Wireframe",
     content: "Demonstration project for Klick Health AEM development team.",
   },
   {
@@ -101,13 +101,6 @@ const PorfolioUxData = [
     category: "Responsive Website",
     content:
       "Student project for ordering prescription online from safe local source.",
-  },
-  {
-    id: 5,
-    title: "Portfolio",
-    icon: "devices",
-    category: "Responsive Website",
-    content: "Personal project for practicing UX and React.",
   },
 ];
 
