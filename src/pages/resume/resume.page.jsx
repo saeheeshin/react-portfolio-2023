@@ -10,7 +10,7 @@ import {
   QualificationData,
 } from "../../content/site.data";
 
-import Button from "../../components/global/button/button.component";
+import { Anchor } from "../../components/global/button/button.component";
 import QualificationList from "../../components/qualification-list/qualification-list.component";
 import Tab from "../../components/resume/tab/tab.component";
 import ResumeItem from "../../components/resume/resume-item/resume-item.component";
@@ -48,9 +48,15 @@ const PageResume = () => {
 
       <Section sectionName="resume__button">
         <div className="grid__mobile--6 grid__desktop--12">
-          <Button buttonType="tertiary" icon="download_for_offline">
+          <Anchor
+            buttonType="tertiary"
+            icon="download_for_offline"
+            link="/assets/documents/saeheeshin-resume-2023.pdf"
+            rel="noreferrer"
+            target="_blank"
+          >
             Download PDF Resume
-          </Button>
+          </Anchor>
         </div>
       </Section>
 
@@ -74,9 +80,15 @@ const PageResume = () => {
 
       <Section sectionName="resume__button">
         <div className="grid__mobile--6 grid__desktop--12">
-          <Button buttonType="tertiary" icon="download_for_offline">
+          <Anchor
+            buttonType="tertiary"
+            icon="download_for_offline"
+            link="/assets/documents/saeheeshin-resume-2023.pdf"
+            rel="noreferrer"
+            target="_blank"
+          >
             Download PDF Resume
-          </Button>
+          </Anchor>
         </div>
       </Section>
     </Fragment>
