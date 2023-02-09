@@ -8,6 +8,7 @@
   position: relative;
 
   .content {
+    padding-top: 60px;
     width: 100%;
     display: block;
     background: $brand_copy;
@@ -17,6 +18,10 @@
     }
     @include desktop {
       min-height: 600px;
+    }
+
+    article {
+      @include defaultLayout;
     }
   }
 }
