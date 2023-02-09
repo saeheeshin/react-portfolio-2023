@@ -20,6 +20,11 @@
     }
     img {
       background: $brand_copy;
+      background: radial-gradient(
+        ellipse at 50% 40%,
+        $brand_copy 50%,
+        $brand_dark 100%
+      );
 
       @include mobile {
         box-shadow: inset 0 0 0 8px $brand_white;

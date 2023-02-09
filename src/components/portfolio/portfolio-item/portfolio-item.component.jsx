@@ -29,6 +29,7 @@ const PortfolioItem = ({ details: { title, icon, category, content } }) => {
       </div>
 
       <div className="portfolio-item__hover">
+        <h3>{title}</h3>
         <p>{content}</p>
       </div>
     </div>

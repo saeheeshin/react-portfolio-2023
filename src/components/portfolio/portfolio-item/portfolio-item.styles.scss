@@ -3,8 +3,9 @@
 .portfolio-item {
   position: relative;
   padding: 0 15px 15px 15px;
-  background: #727199;
-  background: radial-gradient(ellipse at 50% 40%, #727199 34%, #2b2b4b 100%);
+  overflow: hidden;
+  background: $brand_copy;
+  background: radial-gradient(ellipse at 50% 40%, #727199 20%, $brand_copy 80%);
 
   a {
     position: absolute;
@@ -12,6 +13,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 4;
   }
 
   h3,
@@ -22,7 +24,7 @@
   }
 
   h3 {
-    margin: 15px 0 8px 0;
+    margin: 8px 0 5px 0;
   }
 
   .portfolio-item__thumbnail {
@@ -30,15 +32,94 @@
   }
 
   .portfolio-item__heading {
+    position: relative;
     display: flex;
     flex-direction: column;
+    z-index: 1;
 
     .material-symbols-rounded {
       margin-right: 8px;
     }
   }
 
-  .portfolio-item__hover {
-    display: none;
+  @include mobile {
+    .portfolio-item__hover {
+      display: none;
+    }
+  }
+
+  /**** PREPARE FOR HOVER ****/
+  @include desktop {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 600ms ease-in-out;
+      will-change: opacity;
+      z-index: 2;
+      background: $brand_dark;
+    }
+
+    .portfolio-item__thumbnail {
+      transform: scale(1);
+      transition: all 800ms cubic-bezier(0.15, 0.9, 0.5, 1);
+      will-change: transform;
+    }
+
+    .portfolio-item__hover {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      padding: 15px;
+      width: calc(100% - 30px);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      opacity: 0;
+      z-index: 3;
+      transition: top 400ms cubic-bezier(0.5, 1, 0.5, 1.5),
+        opacity 500ms ease-in-out;
+      will-change: top, opacity;
+      background: rgba($brand_dark, 0.6);
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        display: block;
+        background: $brand_white;
+      }
+
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
+      }
+
+      h3 {
+        margin-top: 0;
+      }
+    }
+
+    /**** HOVER ****/
+    &:hover {
+      &:before {
+        opacity: 0.6;
+      }
+      .portfolio-item__thumbnail {
+        transform: scale(1.2);
+      }
+      .portfolio-item__hover {
+        top: 50%;
+        opacity: 1;
+      }
+    }
   }
 }
