@@ -18,8 +18,10 @@ const PagePortfolio = () => {
   return (
     <Fragment>
       <SubPageHero>
+        <div className="grid__mobile--0 grid__desktop--4"></div>
         <h1 className="grid__mobile--6 grid__desktop--8">
-          Beautiful Pixel Perfect Design and Clean Script
+          Beautiful Pixel Perfect{" "}
+          <span className="brand__color--primary">Design and Clean Script</span>
         </h1>
       </SubPageHero>
 

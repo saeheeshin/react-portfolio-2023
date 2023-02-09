@@ -39,8 +39,10 @@ const PageResume = () => {
   return (
     <Fragment>
       <SubPageHero>
+        <div className="grid__mobile--0 grid__desktop--4"></div>
         <h1 className="grid__mobile--6 grid__desktop--8">
-          More than 10 Years of Professional Experience
+          <span className="brand__color--tertiary">More than 10 Years</span> of
+          Professional Experience
         </h1>
       </SubPageHero>
 

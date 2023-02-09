@@ -5,6 +5,18 @@
   background: $brand_copy;
 
   h1 {
+    margin: 60px 0;
     color: $brand_white;
+  }
+
+  .subpage-hero__content {
+    align-items: center;
+
+    @include mobile {
+      min-height: 300px;
+    }
+    @include desktop {
+      min-height: 400px;
+    }
   }
 }

@@ -16,8 +16,10 @@ const PageAbout = () => {
   return (
     <Fragment>
       <SubPageHero>
+        <div className="grid__mobile--0 grid__desktop--4"></div>
         <h1 className="grid__mobile--6 grid__desktop--8">
-          A Strong Desire to Design and Develop
+          A Strong Desire to{" "}
+          <span className="brand__color--secondary">Design and Develop</span>
         </h1>
       </SubPageHero>
 

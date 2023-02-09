@@ -149,3 +149,14 @@ menu {
 @include tablet-sm-only {
   @include grid(12, tablet-sm-only);
 }
+
+/**** TYPE COLOR ****/
+.brand__color--primary {
+  color: $brand_primary;
+}
+.brand__color--secondary {
+  color: $brand_secondary;
+}
+.brand__color--tertiary {
+  color: $brand_tertiary;
+}

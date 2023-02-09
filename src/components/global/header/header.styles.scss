@@ -25,6 +25,10 @@
 
 @include mobile {
   header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     background: $brand_copy;
 
     section {
@@ -120,6 +124,10 @@
 
 @include desktop {
   header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     padding: 10px 0;
     background: $brand_copy;
 
