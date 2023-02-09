@@ -9,20 +9,17 @@ const Carousel = () => {
       options={{
         rewind: true,
         width: "100%",
-        gap: "1px",
+        gap: "0",
       }}
     >
       <SplideSlide>
-        <img src="https://picsum.photos/200/100" alt="1" />
+        <div className="content">Test</div>
       </SplideSlide>
       <SplideSlide>
-        <img src="https://picsum.photos/200/100?grayscale" alt="2" />
+        <div className="content">Test</div>
       </SplideSlide>
       <SplideSlide>
-        <img src="https://picsum.photos/200/100" alt="2" />
-      </SplideSlide>
-      <SplideSlide>
-        <img src="https://picsum.photos/200/100?grayscale" alt="2" />
+        <div className="content">Test</div>
       </SplideSlide>
     </Splide>
   );

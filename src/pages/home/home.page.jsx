@@ -3,6 +3,7 @@ import { useEffect, Fragment } from "react"; // Fragment is you do not want wrap
 
 import Section from "../../components/global/section/section.component";
 import SectionFullWidth from "../../components/global/section-full-width/section-full-width.component";
+import Carousel from "../../components/homepage/carousel/carousel.component";
 
 import QualificationList from "../../components/qualification-list/qualification-list.component";
 import ExperienceGraph from "../../components/homepage/experience-graph/experience-graph.component";
@@ -22,6 +23,8 @@ const PageHome = () => {
 
   return (
     <Fragment>
+      <Carousel />
+
       <Section sectionName="homepage__about-me">
         <h2 className="grid__mobile--6 grid__desktop--12">About Me</h2>
         <div className="homepage__area--about-me grid__mobile--6 grid__desktop--5 grid__tablet-sm-only--12">

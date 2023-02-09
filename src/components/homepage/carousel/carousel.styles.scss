@@ -1,1 +1,22 @@
 @import "../../../sass-boilerplate/helper.scss";
+
+.splide {
+  margin-bottom: $spacing__section;
+}
+
+.splide__slide {
+  position: relative;
+
+  .content {
+    width: 100%;
+    display: block;
+    background: $brand_copy;
+
+    @include mobile {
+      min-height: 500px;
+    }
+    @include desktop {
+      min-height: 600px;
+    }
+  }
+}

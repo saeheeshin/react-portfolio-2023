@@ -36,9 +36,9 @@ const SocialMediaData = [
   },
   {
     id: 3,
-    to: "mailto:saeheeshin@gmail.com?subject=Portfolio%20Inquries",
-    text: "Email",
-    className: "social__btn--email",
+    to: "https://github.com/saeheeshin",
+    text: "Github",
+    className: "social__btn--github",
   },
 ];
 
