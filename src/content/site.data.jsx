@@ -232,11 +232,29 @@ const ResumeEducationData = [
           <ul>
             <li>A rigorous training designed for entry-level job readiness. Topics included <strong>UX research fundamentals, user map, user story, personas, user journey, equitable design, wireframes, and hi-fi prototypes</strong> using Figma and Adobe XD.</li>
             <li>Draw quick concepts and iteration through a <strong>lo-fi wireframe</strong> and <strong>crazy eight</strong> exercises.</li>
+            <li><a href="https://www.coursera.org/account/accomplishments/professional-cert/LEX4TGSQ6LUY" target="_blank" rel="noreferrer">Link to Certification</a></li>
           </ul>
         `,
   },
   {
     id: 2,
+    title: "udemy",
+    content: `
+          <hgroup>
+            <h3>Udemy Certificate</h3>
+            <h4>Present</h4>
+          </hgroup>
+    
+          <ul>
+            <li>Learn Figma - UI/UX Design Essential Training (July 21, 2021)</li>
+            <li>Process Flowcharts & Process Mapping - The Beginner's Guide (July 19, 2021)</li>
+            <li>Agile Crash Course : Agile project Management; Agile Delivery (June 24, 2021)</li>
+            <li>Sketch from A to Z: Become an app designer (June 14, 2021)</li>
+          </ul>
+        `,
+  },
+  {
+    id: 3,
     title: "seneca",
     content: `
           <hgroup>
