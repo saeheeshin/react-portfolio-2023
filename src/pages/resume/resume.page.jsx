@@ -5,6 +5,7 @@ import SubPageHero from "../../components/global/subpage-hero/subpage-hero.compo
 
 import {
   PageTitle,
+  ResumeDownloadData,
   ResumeExperienceData,
   ResumeEducationData,
   QualificationData,
@@ -48,15 +49,7 @@ const PageResume = () => {
 
       <Section sectionName="resume__button">
         <div className="grid__mobile--6 grid__desktop--12">
-          <Anchor
-            buttonType="tertiary"
-            icon="download_for_offline"
-            link="/assets/documents/saeheeshin-resume-2023.pdf"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Download PDF Resume
-          </Anchor>
+          <Anchor details={ResumeDownloadData}>Download PDF Resume</Anchor>
         </div>
       </Section>
 
@@ -80,15 +73,7 @@ const PageResume = () => {
 
       <Section sectionName="resume__button">
         <div className="grid__mobile--6 grid__desktop--12">
-          <Anchor
-            buttonType="tertiary"
-            icon="download_for_offline"
-            link="/assets/documents/saeheeshin-resume-2023.pdf"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Download PDF Resume
-          </Anchor>
+          <Anchor details={ResumeDownloadData}>Download PDF Resume</Anchor>
         </div>
       </Section>
     </Fragment>

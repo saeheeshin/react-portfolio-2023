@@ -1,7 +1,7 @@
 import "./button.styles.scss";
 import { Link } from "react-router-dom";
 
-const Button = ({ buttonType, link, children, icon }) => {
+const Button = ({ details: { buttonType, link, icon }, children }) => {
   return (
     <Link className={`btn btn__${buttonType}`} to={link}>
       <strong>
@@ -12,7 +12,10 @@ const Button = ({ buttonType, link, children, icon }) => {
   );
 };
 
-const Anchor = ({ buttonType, link, children, icon, rel, target }) => {
+const Anchor = ({
+  details: { buttonType, link, icon, rel, target },
+  children,
+}) => {
   return (
     <a
       className={`btn btn__${buttonType}`}

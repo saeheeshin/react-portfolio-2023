@@ -143,6 +143,14 @@ const PortfolioFrontEndData = [
 /*****************/
 /**** RESUME ****/
 /***************/
+const ResumeDownloadData = {
+  buttonType: "tertiary",
+  icon: "download_for_offline",
+  link: "/assets/documents/saeheeshin-resume-2023.pdf",
+  rel: "noreferrer",
+  target: "_blank",
+};
+
 const ResumeExperienceData = [
   {
     id: 1,
@@ -362,6 +370,7 @@ export {
   PortfolioShowcaseData,
   PorfolioUxData,
   PortfolioFrontEndData,
+  ResumeDownloadData,
   ResumeExperienceData,
   ResumeEducationData,
   BrandData,
