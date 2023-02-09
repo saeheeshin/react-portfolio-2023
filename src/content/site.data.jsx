@@ -146,6 +146,20 @@ const PortfolioFrontEndData = [
 const ResumeExperienceData = [
   {
     id: 1,
+    title: "epcm",
+    content: `
+          <hgroup>
+            <h3>Freelance UX Designer</h3>
+            <h4>Jan 2023 - Present</h4>
+          </hgroup>
+    
+          <ul>
+            <li>Details</li>
+          </ul>
+        `,
+  },
+  {
+    id: 2,
     title: "klick",
     content: `
           <hgroup>
@@ -170,7 +184,7 @@ const ResumeExperienceData = [
         `,
   },
   {
-    id: 2,
+    id: 3,
     title: "moveable-online",
     content: `
           <hgroup>
@@ -184,7 +198,7 @@ const ResumeExperienceData = [
         `,
   },
   {
-    id: 3,
+    id: 4,
     title: "interad",
     content: `
           <hgroup>

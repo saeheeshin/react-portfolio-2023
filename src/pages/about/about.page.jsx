@@ -27,8 +27,8 @@ const PageAbout = () => {
           <p>
             I am an experienced <strong>Front End Developer</strong> with a
             passion for <strong>UX Design</strong> located in{" "}
-            <strong>Toronto, Canada</strong>. I'm currently looking for entry
-            level UX Designer or Front End Developer position.
+            <strong>Toronto, Canada</strong>. I'm working as UX Designer and
+            Front End Developer.
           </p>
           <p>
             You'll often find me occupied with diverse personal interests
