@@ -275,21 +275,25 @@ const BrandData = [
     title: "Avrobio",
     sector: "Pharmaceutical",
   },
-
   {
     id: 5,
+    title: "EPCM",
+    sector: "Engineering",
+  },
+  // {
+  //   id: 5,
+  //   title: "West49",
+  //   sector: "Clothing + Retail",
+  // },
+  {
+    id: 6,
     title: "Lyreco",
     sector: "Retail",
   },
   {
-    id: 6,
+    id: 7,
     title: "Lowes",
     sector: "Retail",
-  },
-  {
-    id: 7,
-    title: "West49",
-    sector: "Clothing + Retail",
   },
   {
     id: 8,
