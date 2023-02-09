@@ -1,12 +1,28 @@
 import "./portfolio.styles.scss";
-import { Fragment } from "react"; // Fragment is you do not want wrapping div
+import { useEffect, Fragment } from "react"; // Fragment is you do not want wrapping div
 import Section from "../../components/global/section/section.component";
+import SubPageHero from "../../components/global/subpage-hero/subpage-hero.component";
+
 import PortfolioItem from "../../components/portfolio/portfolio-item/portfolio-item.component";
-import { PorfolioUxData, PortfolioFrontEndData } from "../../content/site.data";
+import {
+  PageTitle,
+  PorfolioUxData,
+  PortfolioFrontEndData,
+} from "../../content/site.data";
 
 const PagePortfolio = () => {
+  useEffect(() => {
+    document.title = `${PageTitle.portfolio} | ${PageTitle.name}`;
+  });
+
   return (
     <Fragment>
+      <SubPageHero>
+        <h1 className="grid__mobile--6 grid__desktop--8">
+          Beautiful Pixel Perfect Design and Clean Script
+        </h1>
+      </SubPageHero>
+
       <Section sectionName="portfolio-page__ux">
         <h2 className="grid__mobile--6 grid__desktop--12">UX Case Study</h2>
         {PorfolioUxData.map((portfolio) => {

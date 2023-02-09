@@ -3,7 +3,7 @@
 .section-full-width {
   position: relative;
   left: 50%;
-  margin-bottom: 80px;
+  margin-bottom: $spacing__section;
   transform: translateX(-50%);
   margin-left: 0;
   margin-right: 0;

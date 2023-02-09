@@ -1,15 +1,26 @@
 import "./about.styles.scss";
-import { Fragment } from "react"; // Fragment is you do not want wrapping div
+import { useEffect, Fragment } from "react"; // Fragment is you do not want wrapping div
 import Section from "../../components/global/section/section.component";
+import SubPageHero from "../../components/global/subpage-hero/subpage-hero.component";
 
 import Brands from "../../components/about-me/brands/brands.component";
 import WhatIDo from "../../components/about-me/what-i-do/what-i-do.component";
 
-import { BrandData, WhatIDoData } from "../../content/site.data";
+import { PageTitle, BrandData, WhatIDoData } from "../../content/site.data";
 
 const PageAbout = () => {
+  useEffect(() => {
+    document.title = `${PageTitle.about} | ${PageTitle.name}`;
+  });
+
   return (
     <Fragment>
+      <SubPageHero>
+        <h1 className="grid__mobile--6 grid__desktop--8">
+          A Strong Desire to Design and Develop
+        </h1>
+      </SubPageHero>
+
       <Section sectionName="about-page__about-me">
         <article className="grid__mobile--6 grid__desktop--8">
           <h2>About Me</h2>

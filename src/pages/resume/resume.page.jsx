@@ -1,7 +1,10 @@
 import "./resume.styles.scss";
-import { Fragment, useState } from "react"; // Fragment is you do not want wrapping div
+import { useEffect, useState, Fragment } from "react"; // Fragment is you do not want wrapping div
 import Section from "../../components/global/section/section.component";
+import SubPageHero from "../../components/global/subpage-hero/subpage-hero.component";
+
 import {
+  PageTitle,
   ResumeExperienceData,
   ResumeEducationData,
   QualificationData,
@@ -13,6 +16,10 @@ import Tab from "../../components/resume/tab/tab.component";
 import ResumeItem from "../../components/resume/resume-item/resume-item.component";
 
 const PageResume = () => {
+  useEffect(() => {
+    document.title = `${PageTitle.resume} | ${PageTitle.name}`;
+  });
+
   const [resumeContent, setResumeContent] = useState(ResumeExperienceData);
 
   const tabChangeResume = () => {
@@ -31,6 +38,12 @@ const PageResume = () => {
 
   return (
     <Fragment>
+      <SubPageHero>
+        <h1 className="grid__mobile--6 grid__desktop--8">
+          More than 10 Years of Professional Experience
+        </h1>
+      </SubPageHero>
+
       <Section sectionName="resume__button">
         <div className="grid__mobile--6 grid__desktop--12">
           <Button buttonType="tertiary" icon="download_for_offline">

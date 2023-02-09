@@ -1,5 +1,5 @@
 import "./home.styles.scss";
-import { Fragment } from "react"; // Fragment is you do not want wrapping div
+import { useEffect, Fragment } from "react"; // Fragment is you do not want wrapping div
 
 import Section from "../../components/global/section/section.component";
 import SectionFullWidth from "../../components/global/section-full-width/section-full-width.component";
@@ -9,12 +9,17 @@ import ExperienceGraph from "../../components/homepage/experience-graph/experien
 import PortfolioShowcaseFull from "../../components/homepage/portfolio-showcase-full/portfolio-showcase-full.component";
 
 import {
+  PageTitle,
   ExperienceGraphData,
   QualificationData,
   PortfolioShowcaseData,
 } from "../../content/site.data";
 
 const PageHome = () => {
+  useEffect(() => {
+    document.title = `${PageTitle.name} | ${PageTitle.home}`;
+  });
+
   return (
     <Fragment>
       <Section sectionName="homepage__about-me">

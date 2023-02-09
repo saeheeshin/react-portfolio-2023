@@ -120,7 +120,8 @@ menu {
 
 /**** GRID ****/
 .section,
-.section-full-width {
+.section-full-width,
+.subpage-hero .subpage-hero__content {
   display: grid;
 
   @include mobile {

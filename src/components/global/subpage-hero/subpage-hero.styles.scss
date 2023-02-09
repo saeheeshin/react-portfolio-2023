@@ -1,5 +1,10 @@
 @import "../../../sass-boilerplate/helper.scss";
 
-.section {
+.subpage-hero {
   margin-bottom: $spacing__section;
+  background: $brand_copy;
+
+  h1 {
+    color: $brand_white;
+  }
 }

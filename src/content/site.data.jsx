@@ -1,3 +1,14 @@
+/*********************/
+/**** PAGE TITLE ****/
+/*******************/
+const PageTitle = {
+  name: "Portfolio of Sae-Hee Shin",
+  home: "UX Designer and Front End Developer",
+  portfolio: "Portfolio",
+  resume: "Resume",
+  about: "About Me",
+};
+
 /*******************/
 /**** HOMEPAGE ****/
 /*****************/
@@ -309,6 +320,7 @@ const WhatIDoData = [
 ];
 
 export {
+  PageTitle,
   ExperienceGraphData,
   QualificationData,
   PortfolioShowcaseData,
