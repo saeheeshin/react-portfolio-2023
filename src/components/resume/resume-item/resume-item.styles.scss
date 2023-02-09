@@ -45,5 +45,10 @@
   }
   ul {
     margin-top: 20px;
+
+    a {
+      color: $brand_copy;
+      @include Link($brand_tertiary);
+    }
   }
 }
