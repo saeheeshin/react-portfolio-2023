@@ -13,34 +13,34 @@ const Carousel = () => {
       }}
     >
       <SplideSlide>
-        <div className="content">
-          <article>
+        <div className="carousel__content">
+          <section>
             <h2>HOME</h2>
-          </article>
+          </section>
         </div>
       </SplideSlide>
 
       <SplideSlide>
-        <div className="content">
-          <article>
+        <div className="carousel__content">
+          <section>
             <h2>PORTFOLIO</h2>
-          </article>
+          </section>
         </div>
       </SplideSlide>
 
       <SplideSlide>
-        <div className="content">
-          <article>
+        <div className="carousel__content">
+          <section>
             <h2>RESUME</h2>
-          </article>
+          </section>
         </div>
       </SplideSlide>
 
       <SplideSlide>
-        <div className="content">
-          <article>
+        <div className="carousel__content">
+          <section>
             <h2>ABOUT ME</h2>
-          </article>
+          </section>
         </div>
       </SplideSlide>
     </Splide>

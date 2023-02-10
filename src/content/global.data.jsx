@@ -50,8 +50,8 @@ const FooterData = {
 };
 
 const MediaQuery = {
-  mobile: "screen and (max-width: 600px)",
-  desktop: "screen and (min-width: 601px) and (max-width: 9999px)",
+  mobile: "(max-width: 600px)",
+  desktop: "(min-width: 601px) and (max-width: 9999px)",
 };
 
 export { NavigationData, SocialMediaData, FooterData, MediaQuery };

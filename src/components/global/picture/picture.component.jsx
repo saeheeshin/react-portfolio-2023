@@ -5,8 +5,8 @@ const Picture = ({
 }) => {
   return (
     <picture>
-      <source media={MediaQuery.desktop} src={desktopImagePath} />
-      <source media={MediaQuery.mobile} src={mobileImagePath} />
+      <source media={MediaQuery.desktop} srcSet={desktopImagePath} />
+      <source media={MediaQuery.mobile} srcSet={mobileImagePath} />
       <img
         {...(className === undefined ? "" : { className: className })}
         src={mobileImagePath}

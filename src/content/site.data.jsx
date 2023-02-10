@@ -113,6 +113,13 @@ const PorfolioUxData = [
     content:
       "Student project for ordering prescription online from safe local source.",
   },
+  {
+    id: 5,
+    title: "Portfolio",
+    icon: "devices",
+    category: "Responsive Website",
+    content: "A site to display my work and learn React.",
+  },
 ];
 
 const PortfolioFrontEndData = [

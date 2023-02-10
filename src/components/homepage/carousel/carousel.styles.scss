@@ -4,10 +4,10 @@
   margin-bottom: $spacing__section;
 }
 
-.splide__slide {
+.splide {
   position: relative;
 
-  .content {
+  .carousel__content {
     padding-top: 60px;
     width: 100%;
     display: block;
@@ -20,8 +20,13 @@
       min-height: 600px;
     }
 
-    article {
+    section {
       @include defaultLayout;
+      overflow: hidden;
     }
+  }
+
+  .splide__pagination {
+    bottom: 20px;
   }
 }
