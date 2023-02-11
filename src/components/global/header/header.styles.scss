@@ -23,15 +23,17 @@
   }
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background: $brand_copy;
+}
+
 @include mobile {
   header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-    background: $brand_copy;
-
     section {
       padding: 8px 0;
       height: 51px;
@@ -125,13 +127,7 @@
 
 @include desktop {
   header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     padding: 10px 0;
-    z-index: 2;
-    background: $brand_copy;
 
     > section {
       @include defaultLayout;
