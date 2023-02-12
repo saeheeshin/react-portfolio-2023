@@ -3,10 +3,7 @@ import { FooterData } from "../../../content/global.data";
 import parse from "html-react-parser";
 import Logo from "../logo/logo.component";
 import SocialLink from "../social-link/social-link.component";
-
-const backToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
+import { backToTop } from "../../../scripts/script";
 
 const Footer = () => {
   const { withLove, title, text } = FooterData;

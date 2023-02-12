@@ -7,11 +7,11 @@ import Brands from "../../components/about-me/brands/brands.component";
 import WhatIDo from "../../components/about-me/what-i-do/what-i-do.component";
 
 import { PageTitle, BrandData, WhatIDoData } from "../../content/site.data";
-import { PageChangeHandler } from "../../scripts/script";
+import { pageChangeHandler } from "../../scripts/script";
 
 const PageAbout = () => {
   useEffect(() => {
-    PageChangeHandler(PageTitle.about, PageTitle.name);
+    pageChangeHandler(PageTitle.about, PageTitle.name);
   });
 
   return (
