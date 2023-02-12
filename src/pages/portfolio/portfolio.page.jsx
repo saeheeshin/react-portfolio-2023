@@ -9,10 +9,11 @@ import {
   PorfolioUxData,
   PortfolioFrontEndData,
 } from "../../content/site.data";
+import { PageChangeHandler } from "../../scripts/script";
 
 const PagePortfolio = () => {
   useEffect(() => {
-    document.title = `${PageTitle.portfolio} | ${PageTitle.name}`;
+    PageChangeHandler(PageTitle.portfolio, PageTitle.name);
   });
 
   return (

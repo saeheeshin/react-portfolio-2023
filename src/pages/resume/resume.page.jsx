@@ -10,6 +10,7 @@ import {
   ResumeEducationData,
   QualificationData,
 } from "../../content/site.data";
+import { PageChangeHandler } from "../../scripts/script";
 
 import { Anchor } from "../../components/global/button/button.component";
 import QualificationList from "../../components/qualification-list/qualification-list.component";
@@ -18,7 +19,7 @@ import ResumeItem from "../../components/resume/resume-item/resume-item.componen
 
 const PageResume = () => {
   useEffect(() => {
-    document.title = `${PageTitle.resume} | ${PageTitle.name}`;
+    PageChangeHandler(PageTitle.resume, PageTitle.name);
   });
 
   const [resumeContent, setResumeContent] = useState(ResumeExperienceData);

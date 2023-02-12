@@ -15,10 +15,11 @@ import {
   QualificationData,
   PortfolioShowcaseData,
 } from "../../content/site.data";
+import { PageChangeHandler } from "../../scripts/script";
 
 const PageHome = () => {
   useEffect(() => {
-    document.title = `${PageTitle.name} | ${PageTitle.home}`;
+    PageChangeHandler(PageTitle.home, PageTitle.name);
   });
 
   return (
