@@ -20,7 +20,7 @@ import { pageChangeHandler } from "../../scripts/script";
 const PageHome = () => {
   useEffect(() => {
     pageChangeHandler(PageTitle.home, PageTitle.name);
-  });
+  }, []);
 
   return (
     <Fragment>

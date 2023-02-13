@@ -14,7 +14,7 @@ import { pageChangeHandler } from "../../scripts/script";
 const PagePortfolio = () => {
   useEffect(() => {
     pageChangeHandler(PageTitle.portfolio, PageTitle.name);
-  });
+  }, []);
 
   return (
     <Fragment>

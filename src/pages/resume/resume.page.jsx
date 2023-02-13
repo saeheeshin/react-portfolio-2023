@@ -20,7 +20,7 @@ import ResumeItem from "../../components/resume/resume-item/resume-item.componen
 const PageResume = () => {
   useEffect(() => {
     pageChangeHandler(PageTitle.resume, PageTitle.name);
-  });
+  }, []);
 
   const [resumeContent, setResumeContent] = useState(ResumeExperienceData);
 

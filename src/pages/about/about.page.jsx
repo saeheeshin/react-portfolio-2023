@@ -12,7 +12,7 @@ import { pageChangeHandler } from "../../scripts/script";
 const PageAbout = () => {
   useEffect(() => {
     pageChangeHandler(PageTitle.about, PageTitle.name);
-  });
+  }, []);
 
   return (
     <Fragment>
