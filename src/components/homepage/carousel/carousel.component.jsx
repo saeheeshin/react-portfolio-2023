@@ -1,6 +1,10 @@
 import "./carousel.styles.scss";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import { Button } from "../../global/button/button.component";
+import parse from "html-react-parser";
+
+import { CarouselData } from "../../../content/site.data";
 
 const Carousel = () => {
   return (
@@ -12,37 +16,25 @@ const Carousel = () => {
         gap: "0px",
       }}
     >
-      <SplideSlide>
-        <div className="carousel__content">
-          <section>
-            <h2>HOME</h2>
-          </section>
-        </div>
-      </SplideSlide>
-
-      <SplideSlide>
-        <div className="carousel__content">
-          <section>
-            <h2>PORTFOLIO</h2>
-          </section>
-        </div>
-      </SplideSlide>
-
-      <SplideSlide>
-        <div className="carousel__content">
-          <section>
-            <h2>RESUME</h2>
-          </section>
-        </div>
-      </SplideSlide>
-
-      <SplideSlide>
-        <div className="carousel__content">
-          <section>
-            <h2>ABOUT ME</h2>
-          </section>
-        </div>
-      </SplideSlide>
+      {CarouselData.map(
+        ({ id, className, title, subTitle, buttonText, buttonDetails }) => {
+          return (
+            <SplideSlide key={id}>
+              <div
+                className={`carousel__content carousel__content--${className}`}
+              >
+                <section>
+                  <hgroup>
+                    <h1>{parse(title)}</h1>
+                    <h4>{subTitle}</h4>
+                  </hgroup>
+                  <Button details={buttonDetails}>{buttonText}</Button>
+                </section>
+              </div>
+            </SplideSlide>
+          );
+        }
+      )}
     </Splide>
   );
 };

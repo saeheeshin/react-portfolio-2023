@@ -13,7 +13,7 @@
   }
 
   @include mobile {
-    padding: 14px 22px;
+    padding: 12px 22px 14px 22px;
 
     .material-symbols-rounded {
       margin-right: 8px;
@@ -22,7 +22,7 @@
     }
   }
   @include desktop {
-    padding: 14px 35px;
+    padding: 12px 35px 16px 35px;
 
     .material-symbols-rounded {
       margin-right: 10px;

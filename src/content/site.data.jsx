@@ -12,6 +12,45 @@ const PageTitle = {
 /*******************/
 /**** HOMEPAGE ****/
 /*****************/
+const CarouselData = [
+  {
+    id: 1,
+    className: "portfolio",
+    title: "David's <span>Portfolio</span>",
+    subTitle: "UX Designer / Front End Developer",
+    buttonText: "View Portfolio",
+    buttonDetails: {
+      buttonType: "primary",
+      link: "/portfolio",
+      icon: "devices",
+    },
+  },
+  {
+    id: 2,
+    className: "resume",
+    title: "<span>Various</span> Expertise",
+    subTitle: "Desktop, Tablet, Mobile",
+    buttonText: "View Resume",
+    buttonDetails: {
+      buttonType: "tertiary",
+      link: "/resume",
+      icon: "description",
+    },
+  },
+  {
+    id: 3,
+    className: "about-me",
+    title: "More <span>Me</span>",
+    subTitle: "Learn, Create, Bake",
+    buttonText: "View About Me",
+    buttonDetails: {
+      buttonType: "secondary",
+      link: "/about",
+      icon: "person_pin",
+    },
+  },
+];
+
 const ExperienceGraphData = [
   {
     id: 1,
@@ -372,6 +411,7 @@ const WhatIDoData = [
 
 export {
   PageTitle,
+  CarouselData,
   ExperienceGraphData,
   QualificationData,
   PortfolioShowcaseData,

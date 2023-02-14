@@ -6,6 +6,7 @@
 
 .splide {
   position: relative;
+  background: $brand_copy;
 
   .carousel__content {
     padding-top: 60px;
@@ -24,9 +25,31 @@
       @include defaultLayout;
       overflow: hidden;
     }
+
+    h1,
+    h4 {
+      color: $brand_white;
+    }
   }
 
   .splide__pagination {
     bottom: 20px;
+  }
+
+  // color
+  .carousel__content--portfolio {
+    h1 span {
+      color: $brand_primary;
+    }
+  }
+  .carousel__content--resume {
+    h1 span {
+      color: $brand_tertiary;
+    }
+  }
+  .carousel__content--about-me {
+    h1 span {
+      color: $brand_secondary;
+    }
   }
 }
