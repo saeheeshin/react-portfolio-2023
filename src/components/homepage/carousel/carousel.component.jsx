@@ -9,7 +9,7 @@ const Carousel = () => {
       options={{
         rewind: true,
         width: "100%",
-        gap: "1px",
+        gap: "0px",
       }}
     >
       <SplideSlide>
