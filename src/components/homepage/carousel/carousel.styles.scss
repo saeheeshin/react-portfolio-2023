@@ -53,3 +53,66 @@
     }
   }
 }
+
+// indicator
+.splide__pagination {
+  .splide__pagination__page {
+    opacity: 1;
+    background: $brand_white;
+  }
+
+  li:nth-child(1) .splide__pagination__page.is-active {
+    background: $brand_primary;
+  }
+  li:nth-child(2) .splide__pagination__page.is-active {
+    background: $brand_tertiary;
+  }
+  li:nth-child(3) .splide__pagination__page.is-active {
+    background: $brand_secondary;
+  }
+}
+
+// arrow
+.splide__arrows {
+  .splide__arrow {
+    width: 43px;
+    height: 43px;
+    border: 3px solid $brand_cultured;
+    transition: border 300ms ease-in-out;
+    will-change: border;
+    opacity: 1;
+    background: none;
+
+    &:hover {
+      border: 3px solid $brand_primary;
+    }
+
+    svg {
+      display: none;
+    }
+
+    &.splide__arrow--next,
+    &.splide__arrow--prev {
+      background-image: url("../../../assets/images/icon__carousel--arrow.svg");
+      transition: background-position 400ms cubic-bezier(0.15, 0.9, 0.5, 1.25);
+      will-change: background-position;
+      background-size: 112px auto;
+    }
+
+    &.splide__arrow--next {
+      background-position: 100% 0;
+
+      &:hover {
+        background-position: 0 0;
+      }
+    }
+
+    &.splide__arrow--prev {
+      background-position: 0 100%;
+
+      &:hover {
+        background-position: 100% 100%;
+      }
+    }
+  }
+}
