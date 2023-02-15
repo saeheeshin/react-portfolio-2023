@@ -208,7 +208,8 @@ const ResumeExperienceData = [
           </hgroup>
     
           <ul>
-            <li>Details</li>
+            <li>Work directly with <strong>VP of Business & Product Development</strong> to create clean, easy to use <strong>Human Machine Interface</strong> (<abbr>HMI</abbr>) designs through learning engineers needs, pain point, wireframe, and weekly prototype demonstrations.</li>
+            <li>Provide work estimates and weekly presentation of design solutions.</li>
           </ul>
         `,
   },
