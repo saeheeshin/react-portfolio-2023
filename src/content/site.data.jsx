@@ -18,7 +18,7 @@ const CarouselData = [
     className: "portfolio",
     title: "David's <span>Portfolio</span>",
     subTitle: "UX Designer / Front End Developer",
-    buttonText: "View Portfolio",
+    buttonText: "View My Portfolio",
     buttonDetails: {
       buttonType: "primary",
       link: "/portfolio",
@@ -30,7 +30,7 @@ const CarouselData = [
     className: "resume",
     title: "<span>Various</span> Expertise",
     subTitle: "UX Design and Responsive Site",
-    buttonText: "View Resume",
+    buttonText: "View My Resume",
     buttonDetails: {
       buttonType: "tertiary",
       link: "/resume",
@@ -42,7 +42,7 @@ const CarouselData = [
     className: "about-me",
     title: "More <span>Me</span>",
     subTitle: "Learn, Create, Bake",
-    buttonText: "View About Me",
+    buttonText: "Learn About Me",
     buttonDetails: {
       buttonType: "secondary",
       link: "/about",

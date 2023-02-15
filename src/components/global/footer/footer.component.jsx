@@ -14,7 +14,9 @@ const Footer = () => {
         <div className="logo-wrapper">
           <Logo logoType="inverted-badge" logoLocation="footer" />
         </div>
-        <p className="with-love">{parse(withLove)}</p>
+        <div className="with-love">
+          <p>{parse(withLove)}</p>
+        </div>
         <div onClick={backToTop} className="butterfly"></div>
 
         <div className="content">
