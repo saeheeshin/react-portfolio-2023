@@ -29,7 +29,7 @@ const CarouselData = [
     id: 2,
     className: "resume",
     title: "<span>Various</span> Expertise",
-    subTitle: "Desktop, Tablet, Mobile",
+    subTitle: "UX Design and Responsive Site",
     buttonText: "View Resume",
     buttonDetails: {
       buttonType: "tertiary",

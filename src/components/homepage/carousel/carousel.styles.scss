@@ -9,9 +9,9 @@
   background: $brand_copy;
 
   .carousel__content {
-    padding-top: 60px;
     width: 100%;
-    display: block;
+    display: flex;
+    align-items: center;
     background: $brand_copy;
 
     @include mobile {
@@ -23,12 +23,22 @@
 
     section {
       @include defaultLayout;
+      width: 100%;
       overflow: hidden;
     }
 
     h1,
     h4 {
       color: $brand_white;
+    }
+
+    h4 {
+      @include mobile {
+        margin-bottom: 25px;
+      }
+      @include desktop {
+        margin-bottom: 50px;
+      }
     }
   }
 
@@ -57,61 +67,75 @@
 // indicator
 .splide__pagination {
   .splide__pagination__page {
+    margin: 0 8px;
+    width: 12px;
+    height: 12px;
     opacity: 1;
-    background: $brand_white;
+    transition: transform 300ms cubic-bezier(0.15, 0.9, 0.5, 2.5);
+    will-change: transform, background-color;
+    background-color: $brand_white;
+
+    &.is-active {
+      transform: scale(1.2);
+    }
   }
 
   li:nth-child(1) .splide__pagination__page.is-active {
-    background: $brand_primary;
+    background-color: $brand_primary;
   }
   li:nth-child(2) .splide__pagination__page.is-active {
-    background: $brand_tertiary;
+    background-color: $brand_tertiary;
   }
   li:nth-child(3) .splide__pagination__page.is-active {
-    background: $brand_secondary;
+    background-color: $brand_secondary;
   }
 }
 
 // arrow
 .splide__arrows {
-  .splide__arrow {
-    width: 43px;
-    height: 43px;
-    border: 3px solid $brand_cultured;
-    transition: border 300ms ease-in-out;
-    will-change: border;
-    opacity: 1;
-    background: none;
-
-    &:hover {
-      border: 3px solid $brand_primary;
-    }
-
-    svg {
-      display: none;
-    }
-
-    &.splide__arrow--next,
-    &.splide__arrow--prev {
-      background-image: url("../../../assets/images/icon__carousel--arrow.svg");
-      transition: background-position 400ms cubic-bezier(0.15, 0.9, 0.5, 1.25);
-      will-change: background-position;
-      background-size: 112px auto;
-    }
-
-    &.splide__arrow--next {
-      background-position: 100% 0;
+  @include mobile {
+    display: none;
+  }
+  @include desktop {
+    .splide__arrow {
+      width: 43px;
+      height: 43px;
+      border: 3px solid $brand_cultured;
+      transition: border 300ms ease-in-out;
+      will-change: border;
+      opacity: 1;
+      background: none;
 
       &:hover {
-        background-position: 0 0;
+        border: 3px solid $brand_primary;
       }
-    }
 
-    &.splide__arrow--prev {
-      background-position: 0 100%;
+      svg {
+        display: none;
+      }
 
-      &:hover {
-        background-position: 100% 100%;
+      &.splide__arrow--next,
+      &.splide__arrow--prev {
+        background-image: url("../../../assets/images/icon__carousel--arrow.svg");
+        transition: background-position 400ms cubic-bezier(0.15, 0.9, 0.5, 1.25);
+        will-change: background-position;
+        background-size: 112px auto;
+      }
+
+      &.splide__arrow--next {
+        background-position: 100% 0;
+
+        &:hover {
+          background-position: 0 0;
+        }
+      }
+
+      &.splide__arrow--prev {
+        background-position: 0 100%;
+
+        &:hover {
+          background-position: 100% 100%;
+        }
       }
     }
   }
