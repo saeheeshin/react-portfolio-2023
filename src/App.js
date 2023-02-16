@@ -10,6 +10,8 @@ import PageResume from "./pages/resume/resume.page";
 import PageAbout from "./pages/about/about.page";
 import PageError from "./pages/error/error.page";
 
+import PageCineplus from "./pages/portfolio/cineplus/cineplus.page";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -19,6 +21,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<PageHome />} />
             <Route path="/portfolio" element={<PagePortfolio />} />
+            <Route path="/portfolio/cineplus" element={<PageCineplus />} />
             <Route path="/resume" element={<PageResume />} />
             <Route path="/about" element={<PageAbout />} />
             <Route path="*" element={<PageError />} />
