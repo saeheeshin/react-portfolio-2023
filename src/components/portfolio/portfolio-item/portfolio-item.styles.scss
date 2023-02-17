@@ -34,6 +34,7 @@
   .portfolio-item__heading {
     position: relative;
     display: flex;
+    opacity: 1;
     flex-direction: column;
     z-index: 1;
 
@@ -62,6 +63,12 @@
       will-change: opacity;
       z-index: 2;
       background: $brand_dark;
+    }
+
+    .portfolio-item__heading {
+      transition: opacity 600ms ease-in-out;
+      will-change: opacity;
+      opacity: 1;
     }
 
     .portfolio-item__thumbnail {
@@ -93,6 +100,9 @@
     &:hover {
       &:before {
         opacity: 0.75;
+      }
+      .portfolio-item__heading {
+        opacity: 0.5;
       }
       .portfolio-item__thumbnail {
         transform: scale(1.2);
