@@ -3,3 +3,48 @@
 .section {
   margin-bottom: $spacing__section;
 }
+
+.section-full-width {
+  position: relative;
+  left: 50%;
+  margin-bottom: $spacing__section;
+  transform: translateX(-50%);
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  max-width: none;
+}
+
+.subpage-hero {
+  margin-bottom: $spacing__section;
+  background: $brand_copy;
+
+  h1 {
+    margin: 60px 0;
+    color: $brand_white;
+  }
+
+  .subpage-hero__content {
+    align-items: center;
+
+    @include mobile {
+      min-height: 300px;
+    }
+    @include desktop {
+      min-height: 400px;
+    }
+  }
+
+  &.subpage-hero__portfolio-item {
+    h1 {
+      margin-top: 0;
+      margin-bottom: 25px;
+      color: $brand_primary;
+    }
+    h4 {
+      margin-top: 60px;
+      margin-bottom: 0;
+      color: $brand_white;
+    }
+  }
+}

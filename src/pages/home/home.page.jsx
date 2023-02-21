@@ -1,8 +1,10 @@
 import "./home.styles.scss";
 import { useEffect, Fragment } from "react"; // Fragment is you do not want wrapping div
 
-import Section from "../../components/global/section/section.component";
-import SectionFullWidth from "../../components/global/section-full-width/section-full-width.component";
+import {
+  Section,
+  SectionFullWidth,
+} from "../../components/global/section/section.component";
 import Carousel from "../../components/homepage/carousel/carousel.component";
 
 import QualificationList from "../../components/qualification-list/qualification-list.component";

@@ -1,7 +1,9 @@
 import "./about.styles.scss";
 import { useEffect, Fragment } from "react"; // Fragment is you do not want wrapping div
-import Section from "../../components/global/section/section.component";
-import SubPageHero from "../../components/global/subpage-hero/subpage-hero.component";
+import {
+  SubPageHero,
+  Section,
+} from "../../components/global/section/section.component";
 
 import Brands from "../../components/about-me/brands/brands.component";
 import WhatIDo from "../../components/about-me/what-i-do/what-i-do.component";

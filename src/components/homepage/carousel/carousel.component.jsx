@@ -1,6 +1,7 @@
 import "./carousel.styles.scss";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { Button } from "../../global/button/button.component";
 import parse from "html-react-parser";
 
