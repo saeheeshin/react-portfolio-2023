@@ -12,6 +12,7 @@ const Section = ({ className, sectionName, children }) => {
   );
 };
 
+// use <div className="content__page-width"></div> to align content to center and re-establish grid layout
 const SectionFullWidth = ({ className, sectionName, children }) => {
   return (
     <section

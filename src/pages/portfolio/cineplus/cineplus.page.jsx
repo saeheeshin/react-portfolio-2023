@@ -4,6 +4,7 @@ import { Fragment } from "react"; // Fragment is you do not want wrapping div
 import {
   SubPageHero,
   Section,
+  SectionFullWidth,
 } from "../../../components/global/section/section.component";
 import { Anchor } from "../../../components/global/button/button.component";
 import Breadcrumb from "../../../components/portfolio/breadcrumb/breadcrumb.component";
@@ -81,6 +82,30 @@ const PageCineplus = () => {
           </p>
         </article>
       </Section>
+
+      <SectionFullWidth sectionName="understanding-user">
+        <div className="content__page-width">
+          <div className="grid__mobile--6 grid__desktop--2">
+            <span className="material-symbols-rounded">face</span>
+          </div>
+          <article className="grid__mobile--6 grid__desktop--10">
+            <h2>Understanding the User</h2>
+            <p>
+              The research started with empathy map, personas, user journey,
+              storyboard, and problem statement to answer if the checkout flow
+              made sense and was intuitive to the user.
+            </p>
+            <p>
+              To valid the answer, I conducted a series of unmoderated remote
+              usability study on 5 participants to test checkout flow and if the
+              user are able to find and send purchase link within the mobile
+              app. I found out there were steps users preferred not to fill in,
+              such as seating, while others needed expansion like purchase
+              history and certain areas more visible.
+            </p>
+          </article>
+        </div>
+      </SectionFullWidth>
     </Fragment>
   );
 };

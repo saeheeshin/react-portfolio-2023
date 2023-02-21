@@ -1,1 +1,45 @@
 @import "../../../sass-boilerplate/helper.scss";
+
+.section__understanding-user {
+  background: $brand_copy;
+
+  @include mobile {
+    padding: 40px 0;
+  }
+  @include desktop {
+    padding: 60px 0;
+  }
+
+  h2,
+  p {
+    color: $brand_cultured;
+  }
+
+  h2 {
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  .material-symbols-rounded {
+    margin: auto;
+    border-radius: 100%;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $brand_cultured;
+
+    @include mobile {
+      width: 82px;
+      height: 82px;
+      font-size: 48px;
+    }
+
+    @include desktop {
+      width: 108px;
+      height: 108px;
+      font-size: 48px;
+    }
+  }
+}
