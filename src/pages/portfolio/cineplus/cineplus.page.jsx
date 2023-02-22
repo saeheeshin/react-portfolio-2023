@@ -84,7 +84,7 @@ const PageCineplus = () => {
       </Section>
 
       <SectionFullWidth sectionName="understanding-user">
-        <div className="content__page-width">
+        <div className="set-grid content__page-width">
           <div className="grid__mobile--6 grid__desktop--2">
             <span className="material-symbols-rounded">face</span>
           </div>
@@ -106,6 +106,33 @@ const PageCineplus = () => {
           </article>
         </div>
       </SectionFullWidth>
+
+      <Section sectionName="pain-point">
+        <h2 className="grid__mobile--6 grid__desktop--12">Pain Points</h2>
+
+        <div className="feature__item grid__mobile--6 grid__desktop--4">
+          <div>1</div>
+          <h3>Ease of Use</h3>
+          <p>
+            Users wants to spend less time with purchasing the same tickets.
+          </p>
+        </div>
+
+        <div className="feature__item grid__mobile--6 grid__desktop--4">
+          <div>2</div>
+          <h3>Avoid Mistakes</h3>
+          <p>
+            When purchasing tickets as a group, they want to avoid mistakes when
+            going through the steps.
+          </p>
+        </div>
+
+        <div className="feature__item grid__mobile--6 grid__desktop--4">
+          <div>3</div>
+          <h3>Accessible</h3>
+          <p>They want to purchase ticket anywhere with their mobile device.</p>
+        </div>
+      </Section>
     </Fragment>
   );
 };

@@ -43,3 +43,30 @@
     }
   }
 }
+
+.feature__item {
+  padding: 25px 25px 15px 25px;
+  background: $brand_white;
+
+  > .material-symbols-rounded,
+  > div {
+    margin: auto;
+    width: 63px;
+    height: 63px;
+    border-radius: 100%;
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    color: $brand_cultured;
+    background: $brand_copy;
+  }
+
+  h3 {
+    margin: 35px 0;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+}

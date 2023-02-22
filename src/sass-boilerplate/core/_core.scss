@@ -125,9 +125,9 @@ menu {
 }
 
 /**** GRID ****/
+.set-grid,
 .section,
 .section-full-width,
-.content__page-width,
 .subpage-hero .subpage-hero__content {
   display: grid;
 
@@ -147,7 +147,6 @@ menu {
 
 .content__page-width {
   @include defaultLayout;
-  display: grid;
   grid-column: span 12 / span 12;
 }
 
