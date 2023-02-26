@@ -1,15 +1,22 @@
 import "./cineplus.styles.scss";
-import { Fragment } from "react"; // Fragment is you do not want wrapping div
+import { useEffect, Fragment } from "react"; // Fragment is you do not want wrapping div
 
 import {
   SubPageHero,
   Section,
   SectionFullWidth,
 } from "../../../components/global/section/section.component";
+import { pageChangeHandler } from "../../../scripts/script";
 import { Anchor } from "../../../components/global/button/button.component";
 import Breadcrumb from "../../../components/portfolio/breadcrumb/breadcrumb.component";
 
+import { PageTitle } from "../../../content/site.data";
+
 const PageCineplus = () => {
+  useEffect(() => {
+    pageChangeHandler(PageTitle.cineplus, PageTitle.name);
+  }, []);
+
   return (
     <Fragment>
       <SubPageHero className="subpage-hero__portfolio-item">

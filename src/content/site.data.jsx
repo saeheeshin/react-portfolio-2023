@@ -7,6 +7,7 @@ const PageTitle = {
   portfolio: "Portfolio",
   resume: "Resume",
   about: "About Me",
+  cineplus: "Cineplus Mobile App",
 };
 
 /*******************/
