@@ -302,6 +302,7 @@ const ResumeEducationData = [
           </hgroup>
     
           <ul>
+            <li>A Step by Step Google Analytics 4 Migration Guide from UA (March 6, 2023)</li>
             <li>Learn Figma - UI/UX Design Essential Training (July 21, 2021)</li>
             <li>Process Flowcharts & Process Mapping - The Beginner's Guide (July 19, 2021)</li>
             <li>Agile Crash Course : Agile project Management; Agile Delivery (June 24, 2021)</li>
