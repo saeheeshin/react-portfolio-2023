@@ -210,6 +210,7 @@ const ResumeExperienceData = [
     
           <ul>
             <li>Work directly with <strong>VP of Business & Product Development</strong> to create clean, easy to use <strong>Human Machine Interface</strong> (<abbr>HMI</abbr>) designs through learning engineers needs, pain points, wireframe, and weekly prototype demonstrations.</li>
+            <li>Create easy to use Figma components and variants for future design iterations and updates.</li>
             <li>Provide work estimates and weekly presentation of design solutions.</li>
           </ul>
         `,
