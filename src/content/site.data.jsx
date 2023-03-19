@@ -201,6 +201,20 @@ const ResumeDownloadData = {
 const ResumeExperienceData = [
   {
     id: 1,
+    title: "r-labs",
+    content: `
+          <hgroup>
+            <h3>UX Designer / Web Developer</h3>
+            <h4>Feb 2023 - Present</h4>
+          </hgroup>
+    
+          <ul>
+            <li>Text</li>
+          </ul>
+        `,
+  },
+  {
+    id: 2,
     title: "epcm",
     content: `
           <hgroup>
@@ -216,7 +230,7 @@ const ResumeExperienceData = [
         `,
   },
   {
-    id: 2,
+    id: 3,
     title: "klick",
     content: `
           <hgroup>
@@ -241,7 +255,7 @@ const ResumeExperienceData = [
         `,
   },
   {
-    id: 3,
+    id: 4,
     title: "moveable-online",
     content: `
           <hgroup>
@@ -255,7 +269,7 @@ const ResumeExperienceData = [
         `,
   },
   {
-    id: 4,
+    id: 5,
     title: "interad",
     content: `
           <hgroup>
