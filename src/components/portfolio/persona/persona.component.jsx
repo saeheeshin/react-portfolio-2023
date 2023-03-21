@@ -1,9 +1,17 @@
 import "./persona.styles.scss";
+import { MediaQuery } from "../../../content/global.data";
 
 const Persona = () => {
   return (
     <article className="persona">
-      <h2 className="persona__name">John Smith</h2>
+      <figure>
+        <picture>
+          <source media={MediaQuery.desktop} srcSet={desktopImagePath} />
+          <source media={MediaQuery.mobile} srcSet={mobileImagePath} />
+          <img className="persona__portrait" src="" alt="" />
+        </picture>
+        <figcaption className="persona__name">John Smith</figcaption>
+      </figure>
 
       <table className="persona__details">
         <tbody>
