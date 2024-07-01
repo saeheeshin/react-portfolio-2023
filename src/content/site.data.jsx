@@ -153,13 +153,6 @@ const PorfolioUxData = [
     content:
       "Student project for ordering prescription online from safe local source.",
   },
-  {
-    id: 5,
-    title: "Portfolio",
-    icon: "devices",
-    category: "Responsive Website",
-    content: "A site to display my work and learn React.",
-  },
 ];
 
 const PortfolioFrontEndData = [
@@ -312,11 +305,12 @@ const ResumeEducationData = [
     title: "udemy",
     content: `
           <hgroup>
-            <h3>Udemy Certificate</h3>
+            <h3>Udemy Certificates</h3>
             <h4>Present</h4>
           </hgroup>
     
           <ul>
+            <li>Midjourney Mastery: Create Visually Stunning AI Art (April 1, 2023)</li>
             <li>A Step by Step Google Analytics 4 Migration Guide from UA (March 6, 2023)</li>
             <li>Learn Figma - UI/UX Design Essential Training (July 21, 2021)</li>
             <li>Process Flowcharts & Process Mapping - The Beginner's Guide (July 19, 2021)</li>
